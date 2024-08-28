@@ -39,9 +39,9 @@ class dllNode {
 }
 
 class doubleList {
-	dllNode front;
-	dllNode rear;
-	int count;
+	private dllNode front;
+	private dllNode rear;
+	private int count;
 	
 	doubleList() {
 		// Constructor
