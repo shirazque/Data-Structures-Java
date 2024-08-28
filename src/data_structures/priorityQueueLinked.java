@@ -34,9 +34,9 @@ class pqNode {
 }
 
 class priorityQueue {
-	pqNode front;
-	pqNode rear;
-	int count;
+	private pqNode front;
+	private pqNode rear;
+	private int count;
     
 	priorityQueue() {
     	// Constructor of the Priority Queue
