@@ -1,0 +1,59 @@
+/*
+ * -------------------------------------------------------
+ * Testing the Queue ADT
+ * -------------------------------------------------------
+ * Author: Shiraz Qasmi
+ * ID: 169036233
+ * Email: qasm6233@mylaurier.ca
+ * __updated__ = "2024-08-28"
+ * -------------------------------------------------------
+ */
+
+--------------------------------------------------------------------------------------------------------------------------------
+1. Output (My code):
+--------------------------------------------------------------------------------------------------------------------------------
+ 
+The queue is empty: true
+
+Inserted the following numbers: 7, 9, 3, 1, 5
+
+7
+9
+3
+1
+5
+
+The queue is empty: false
+
+Removed value: 7
+
+9
+3
+1
+5
+
+Peeked value: 9
+
+--------------------------------------------------------------------------------------------------------------------------------
+2. Output (Tests for errors):
+--------------------------------------------------------------------------------------------------------------------------------
+ 
+Test 1: Is Empty (expected: true): true
+Test 2: Length after inserting 3 items (expected: 3): 3
+Test 2: Peek front item (expected: 10): 10
+Test 3: Remove front item (expected: 10): 10
+Test 3: Length after removing 1 item (expected: 2): 2
+Test 3: Peek front item (expected: 20): 20
+Test 4: Remove front item (expected: 20): 20
+Test 4: Remove front item (expected: 30): 30
+Test 4: Length after removing all items (expected: 0): 0
+Test 4: Is Empty (expected: true): true
+Test 5: Peek on empty queue (expected: Queue is empty)
+Test 5: Remove on empty queue (expected: Queue is empty)
+Test 6: Iterating through queue (expected: 40, 50, 60):
+40
+50
+60
+Test 7: Length after multiple operations (expected: 3): 3
+
+--------------------------------------------------------------------------------------------------------------------------------

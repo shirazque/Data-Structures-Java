@@ -1,0 +1,84 @@
+/*
+ * -------------------------------------------------------
+ * Testing the Doubly Linked List ADT
+ * -------------------------------------------------------
+ * Author: Shiraz Qasmi
+ * ID: 169036233
+ * Email: qasm6233@mylaurier.ca
+ * __updated__ = "2024-08-28"
+ * -------------------------------------------------------
+ */
+
+--------------------------------------------------------------------------------------------------------------------------------
+1. Output (My code):
+--------------------------------------------------------------------------------------------------------------------------------
+ 
+Appended, Prepended, Inserted
+
+Traversing the contents of the List
+3
+100
+100
+5
+500
+-102
+-1
+100
+
+Removed front: 3
+Removed rear: 100
+Removed: 5
+
+Traversing the contents of the List
+100
+100
+500
+-102
+-1
+
+Reversed the contents of the List and setting item @ index -1 to 5: 
+5
+-102
+500
+100
+100
+
+Getting item at index 3: 100
+
+Splitting the contents of the List into alternating target Lists appended to an ArrayList:
+
+target1:
+5
+500
+100
+
+target2
+-102
+100
+
+--------------------------------------------------------------------------------------------------------------------------------
+2. Output (Tests for errors):
+--------------------------------------------------------------------------------------------------------------------------------
+ 
+Test 1: Is Empty (expected: true): true
+Test 2: Length after prepending (expected: 3): 3
+Test 2: Peek Front (expected: 30): 30
+Test 2: Peek Rear (expected: 10): 10
+Test 3: Length after appending (expected: 5): 5
+Test 3: Peek Front (expected: 30): 30
+Test 3: Peek Rear (expected: 50): 50
+Test 4: Get item at index 2 (expected: 10): 10
+Test 4: Get item at index 2 after setting (expected: 15): 15
+Test 5: Length after inserting at index 2 (expected: 6): 6
+Test 5: Get item at index 2 (expected: 25): 25
+Test 6: Remove front (expected: 30): 30
+Test 6: Remove rear (expected: 50): 50
+Test 6: Length after removals (expected: 4): 4
+Test 7: Remove item with value 25 (expected: 25): 25
+Test 7: Length after removing item (expected: 3): 3
+Test 8: Max value in the list (expected: 40): 40
+Test 8: Min value in the list (expected: 10): 15
+Test 9: Peek Front after reversing (expected: 40): 40
+Test 9: Peek Rear after reversing (expected: 20): 20
+
+--------------------------------------------------------------------------------------------------------------------------------

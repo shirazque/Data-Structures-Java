@@ -1,0 +1,57 @@
+/*
+ * -------------------------------------------------------
+ * Testing the Stack ADT
+ * -------------------------------------------------------
+ * Author: Shiraz Qasmi
+ * ID: 169036233
+ * Email: qasm6233@mylaurier.ca
+ * __updated__ = "2024-08-28"
+ * -------------------------------------------------------
+ */
+
+--------------------------------------------------------------------------------------------------------------------------------
+1. Output (My code):
+--------------------------------------------------------------------------------------------------------------------------------
+ 
+Printing out the contents of the Stack:
+
+12
+18
+9
+4
+0
+
+
+Popped value from Stack: 12
+Peeked value from the Stack: 18
+
+Printing out the contents of the Stack:
+
+18
+9
+4
+0
+
+--------------------------------------------------------------------------------------------------------------------------------
+2. Output (Tests for errors):
+--------------------------------------------------------------------------------------------------------------------------------
+ 
+Test 1: Is Empty (expected: true): true
+Test 2: Length after pushing 3 items (expected: 3): 3
+Test 2: Peek top item (expected: 30): 30
+Test 3: Pop top item (expected: 30): 30
+Test 3: Length after popping 1 item (expected: 2): 2
+Test 3: Peek top item (expected: 20): 20
+Test 4: Pop top item (expected: 20): 20
+Test 4: Pop top item (expected: 10): 10
+Test 4: Length after popping all items (expected: 0): 0
+Test 4: Is Empty (expected: true): true
+Test 5: Peek on empty stack (expected: Stack is empty)
+Test 5: Pop on empty stack (expected: Stack is empty)
+Test 6: Iterating through stack (expected: 60, 50, 40):
+60
+50
+40
+Test 7: Length after multiple operations (expected: 3): 3
+
+--------------------------------------------------------------------------------------------------------------------------------

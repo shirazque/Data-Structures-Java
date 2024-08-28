@@ -1,0 +1,60 @@
+/*
+ * -------------------------------------------------------
+ * Testing the Priority Queue ADT
+ * -------------------------------------------------------
+ * Author: Shiraz Qasmi
+ * ID: 169036233
+ * Email: qasm6233@mylaurier.ca
+ * __updated__ = "2024-08-28"
+ * -------------------------------------------------------
+ */
+
+--------------------------------------------------------------------------------------------------------------------------------
+1. Output (My code):
+--------------------------------------------------------------------------------------------------------------------------------
+ 
+The queue is empty: true
+
+Inserted the following numbers: 7, 9, 3, 1, 5
+
+1
+3
+5
+7
+9
+
+The queue is empty: false
+
+Removed value: 1
+
+3
+5
+7
+9
+
+Peeked value: 3
+
+--------------------------------------------------------------------------------------------------------------------------------
+2. Output (Tests for errors):
+--------------------------------------------------------------------------------------------------------------------------------
+ 
+Test 1: Is Empty (expected: true): true
+Test 2: Length after inserting 4 items (expected: 4): 4
+Test 2: Peek front item (expected: 5): 5
+Test 3: Remove front item (expected: 5): 5
+Test 3: Length after removing 1 item (expected: 3): 3
+Test 3: Peek front item (expected: 10): 10
+Test 4: Remove front item (expected: 10): 10
+Test 4: Remove front item (expected: 15): 15
+Test 4: Remove front item (expected: 20): 20
+Test 4: Length after removing all items (expected: 0): 0
+Test 4: Is Empty (expected: true): true
+Test 5: Peek on empty priority queue (expected: Priority queue is empty)
+Test 5: Remove on empty priority queue (expected: Priority queue is empty)
+Test 6: Iterating through priority queue (expected: 25, 30, 35):
+25
+30
+35
+Test 7: Length after multiple operations (expected: 3): 3
+
+--------------------------------------------------------------------------------------------------------------------------------

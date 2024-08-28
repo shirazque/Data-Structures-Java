@@ -5,7 +5,7 @@
  * Author: Shiraz Qasmi
  * ID: 169036233
  * Email: qasm6233@mylaurier.ca
- * __updated__ = "2024-08-27"
+ * __updated__ = "2024-08-28"
  * -------------------------------------------------------
  */
 
@@ -194,7 +194,7 @@ class BST {
 				node = node.left;
 			}
 			
-			else if (node.value < key){
+			else if (node.value < key) {
 				node = node.right;
 			}
 			
@@ -211,13 +211,13 @@ class BST {
 	public ArrayList preorderTraversal() {
 		/*
 		 * ----------------------------------------------------------
-		 * function that performs an preorder traversal and appends all
-		 * values into an ArrayList (Recursive Algorthm).
+		 * function that performs an pre order traversal and appends all
+		 * values into an ArrayList (Recursive Algorithm).
 		 * ----------------------------------------------------------
 		 * O(n) Time Complexity
 		 * ----------------------------------------------------------
 		 * Returns:
-		 *        preorder - List of values from the BST preorder (ArrayList)
+		 *        pre order - List of values from the BST pre order (ArrayList)
 		 * ----------------------------------------------------------
 		 */		
 		
@@ -257,7 +257,7 @@ class BST {
 		/*
 		 * ----------------------------------------------------------
 		 * function that performs an inorder traversal and appends all
-		 * values into an ArrayList (Recursive Algorthm).
+		 * values into an ArrayList (Recursive Algorithm).
 		 * ----------------------------------------------------------
 		 * O(n) Time Complexity, i.e., linear time complexity
 		 * ----------------------------------------------------------
@@ -302,7 +302,7 @@ class BST {
 		/*
 		 * ----------------------------------------------------------
 		 * function that performs an postorder traversal and appends all
-		 * values into an ArrayList  (Recursive Algorthm).
+		 * values into an ArrayList  (Recursive Algorithm).
 		 * ----------------------------------------------------------
 		 * O(n) Time Complexity, i.e., linear time complexity
 		 * ----------------------------------------------------------
@@ -343,9 +343,100 @@ class BST {
 		return postorder;
 	}
 	
+	public Integer totalHeight() {
+		/*
+		 * ----------------------------------------------------------
+		 * Calculates the total heights of a BST.
+		 * ----------------------------------------------------------
+		 * O(n) Time Complexity, i.e., linear time complexity
+		 * ----------------------------------------------------------
+		 * Returns:
+		 *        total - The sum of all node heights in the BST, else null (Integer) 
+		 * ----------------------------------------------------------
+		 */	
+		
+		Integer total = 0;
+		
+		if (this.count > 0) {
+			total = this.totalHeightAux(this.root, total);
+		}
+		
+		return total;
+	}
+	
+	
+	private int totalHeightAux(treeNode node, int total) {
+		/*
+		 * ----------------------------------------------------------
+		 * Auxiliary function that calculates the total heights of a BST.
+		 * ----------------------------------------------------------
+		 * O(n) Time Complexity, i.e., linear time complexity
+		 * ----------------------------------------------------------
+		 * Returns:
+		 *        total - The sum of all node heights in the BST (int) 
+		 * ----------------------------------------------------------
+		 */	
+		
+		
+		if (node != null) {
+			total = node.height + this.totalHeightAux(node.left, total) + this.totalHeightAux(node.right, total); 
+		}
+		
+		return total;
+	}
+	
+	public ArrayList flip() {
+		/*
+		 * ----------------------------------------------------------
+		 * Flips the contents of the BST. Returns a list of the BST inorder.
+		 * ----------------------------------------------------------
+		 * O(n) Time Complexity, i.e., linear time complexity
+		 * ----------------------------------------------------------
+		 * Returns:
+		 *        flipped - An ArrayList consisting of the contents of the BST flipped (Integer) 
+		 * ----------------------------------------------------------
+		 */	
+		
+		ArrayList flipped = new ArrayList();
+		
+		// If BST is not empty, perform flip
+		if (this.count > 0) {
+			this.flip(this.root);
+			flipped = this.inorderTraversalAux(this.root, flipped);
+		}
+		
+		return flipped;
+		
+	}
+	
+	private void flip(treeNode node) {
+		/*
+		 * ----------------------------------------------------------
+		 * Flips the contents of the BST. 
+		 * ----------------------------------------------------------
+		 * O(n) Time Complexity, i.e., linear time complexity
+		 * ----------------------------------------------------------
+		 * Returns:
+		 *        null 
+		 * ----------------------------------------------------------
+		 */	
+		
+		if (node != null) {
+			// Perform a simple swap
+			treeNode flip = node.left;
+			node.left = node.right;
+			node.right = flip;
+			
+			// Recursively traverse to the left and right subtree
+	        this.flip(node.left);
+	        this.flip(node.right);
+			
+		}			
+	}
+	
 }
 
-//Testing the BST for errors (Written by GPT-4o)
+//Testing the BST for errors 
 public class bstLinked {
     public static void main(String[] args) {
         // Create an instance of BST
@@ -394,5 +485,22 @@ public class bstLinked {
 
         // Test 9: Length after all operations
         System.out.println("Test 8: Length after all operations (expected: 7): " + myBST.len());
+        
+        // Test 8: Test totalHeight (expected height for root node is 3)
+        System.out.println("Test 8: Total height of the BST (expected: 3): " + myBST.totalHeight());
+
+        // Test 9: Perform flip (mirroring the tree)
+        myBST.flip();
+        System.out.print("Test 9: Inorder Traversal after flip (expected: [25, 20, 17, 15, 12, 10, 8]): ");
+        System.out.println(myBST.inorderTraversal());
+
+        System.out.print("Test 9: Preorder Traversal after flip (expected: [15, 20, 25, 17, 10, 12, 8]): ");
+        System.out.println(myBST.preorderTraversal());
+
+        System.out.print("Test 9: Postorder Traversal after flip (expected: [25, 17, 20, 12, 8, 10, 15]): ");
+        System.out.println(myBST.postorderTraversal());
+
+        // Test 10: Test totalHeight after flip (height should remain unchanged, expected: 3)
+        System.out.println("Test 10: Total height of the BST after flip (expected: 3): " + myBST.totalHeight());
     }
 }

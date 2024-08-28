@@ -5,7 +5,7 @@
  * Author: Shiraz Qasmi
  * ID: 169036233
  * Email: qasm6233@mylaurier.ca
- * __updated__ = "2024-08-27"
+ * __updated__ = "2024-08-28"
  * -------------------------------------------------------
  */
 
@@ -932,7 +932,7 @@ class doubleList {
 	
 }
 
-// Testing the List for errors (Written by GPT-4o)
+// Testing the List for errors
 public class doublyLinkedList {
     public static void main(String[] args) {
         // Create an instance of doubleList

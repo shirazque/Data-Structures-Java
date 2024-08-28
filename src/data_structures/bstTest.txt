@@ -1,0 +1,54 @@
+/*
+ * -------------------------------------------------------
+ * Testing the Binary Search Tree ADT
+ * -------------------------------------------------------
+ * Author: Shiraz Qasmi
+ * ID: 169036233
+ * Email: qasm6233@mylaurier.ca
+ * __updated__ = "2024-08-28"
+ * -------------------------------------------------------
+ */
+
+--------------------------------------------------------------------------------------------------------------------------------
+1. Output (My code):
+--------------------------------------------------------------------------------------------------------------------------------
+ 
+Inserted the following numbers to the BST: 11, 7, 15, 6, 9, 12, 18, 8, 8
+Error: Value 8 already exists in the BST
+
+Preorder Traversal:
+[11, 7, 6, 9, 8, 15, 12, 18]
+
+Inorder Traversal:
+[6, 7, 8, 9, 11, 12, 15, 18]
+
+Postorder Traversal:
+[6, 8, 9, 7, 12, 18, 15, 11]
+
+Inorder Traversal after the BST is flipped: 
+[18, 15, 12, 11, 9, 8, 7, 6]
+
+Sum of the total heights of the BST: 
+15
+ 
+--------------------------------------------------------------------------------------------------------------------------------
+2. Output (Tests for errors):
+--------------------------------------------------------------------------------------------------------------------------------
+ 
+Test 1: Is Empty (expected: true): true
+Test 2: Length after inserting 7 items (expected: 7): 7
+Test 3: Inorder Traversal (expected: [8, 10, 12, 15, 17, 20, 25]): [8, 10, 12, 15, 17, 20, 25]
+Test 4: Preorder Traversal (expected: [15, 10, 8, 12, 20, 17, 25]): [15, 10, 8, 12, 20, 17, 25]
+Test 5: Postorder Traversal (expected: [8, 12, 10, 17, 25, 20, 15]): [8, 12, 10, 17, 25, 20, 15]
+Error: Value 15 already exists in the BST
+Test 7: Inorder Traversal after duplicate insert (expected: [8, 10, 12, 15, 17, 20, 25]): [8, 10, 12, 15, 17, 20, 25]
+Test 7: Preorder Traversal after duplicate insert (expected: [15, 10, 8, 12, 20, 17, 25]): [15, 10, 8, 12, 20, 17, 25]
+Test 7: Postorder Traversal after duplicate insert (expected: [8, 12, 10, 17, 25, 20, 15]): [8, 12, 10, 17, 25, 20, 15]
+Test 8: Length after all operations (expected: 7): 7
+Test 8: Total height of the BST (expected: 3): 11
+Test 9: Inorder Traversal after flip (expected: [25, 20, 17, 15, 12, 10, 8]): [25, 20, 17, 15, 12, 10, 8]
+Test 9: Preorder Traversal after flip (expected: [15, 20, 25, 17, 10, 12, 8]): [15, 20, 25, 17, 10, 12, 8]
+Test 9: Postorder Traversal after flip (expected: [25, 17, 20, 12, 8, 10, 15]): [25, 17, 20, 12, 8, 10, 15]
+Test 10: Total height of the BST after flip (expected: 3): 11
+
+--------------------------------------------------------------------------------------------------------------------------------

@@ -5,7 +5,7 @@
  * Author: Shiraz Qasmi
  * ID: 169036233
  * Email: qasm6233@mylaurier.ca
- * __updated__ = "2024-08-27"
+ * __updated__ = "2024-08-28"
  * -------------------------------------------------------
  */
 
@@ -48,7 +48,17 @@ public class bstTest {
     	ArrayList postorder = test_bst.postorderTraversal();
     	System.out.println(postorder);
     	System.out.println();
-    	System.out.println("");
+    	
+    	// Flipping the BST
+    	System.out.println("Inorder Traversal after the BST is flipped: ");
+    	ArrayList flipped = test_bst.flip();
+    	System.out.println(flipped);
+    	System.out.println();
+    	
+    	// Getting the total heights of the BST
+    	System.out.println("Sum of the total heights of the BST: ");
+    	int heights = test_bst.totalHeight();
+    	System.out.println(heights);
 
     }
 }

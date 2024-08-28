@@ -5,7 +5,7 @@
  * Author: Shiraz Qasmi
  * ID: 169036233
  * Email: qasm6233@mylaurier.ca
- * __updated__ = "2024-08-27"
+ * __updated__ = "2024-08-28"
  * -------------------------------------------------------
  */
 
@@ -163,7 +163,7 @@ class stack {
 
 }
 
-// Testing the Stack for errors (Written by GPT-4o)
+// Testing the Stack for errors
 public class stackLinked {
     public static void main(String[] args) {
         // Create an instance of stack

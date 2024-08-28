@@ -5,7 +5,7 @@
  * Author: Shiraz Qasmi
  * ID: 169036233
  * Email: qasm6233@mylaurier.ca
- * __updated__ = "2024-08-27"
+ * __updated__ = "2024-08-28"
  * -------------------------------------------------------
  */
 
@@ -202,7 +202,7 @@ class priorityQueue {
 	
 }
 
-//Testing the Priority Queue for errors (Written by GPT-4o)
+//Testing the Priority Queue for errors
 public class priorityQueueLinked {
     public static void main(String[] args) {
         // Create an instance of priorityQueue
