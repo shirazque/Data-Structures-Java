@@ -34,9 +34,9 @@ class queueNode {
 }
 
 class queue {
-	queueNode front;
-	queueNode rear;
-	int count;
+	private queueNode front;
+	private queueNode rear;
+	private int count;
     
 	queue() {
     	// Constructor of the Queue
