@@ -10,7 +10,7 @@
  * -------------------------------------------------------
  */
 
-As someone with a strong Python background attempting to learn Java, this project aims to explore Java's
+As someone with a strong Python background transitioning to Java, this project aims to explore Java's
 functionality by implementing various data structures (linked) through  Object-Oriented Programming 
 principles. I will be updating these files as I gain more experience in Java programming over time. I have
 personally  authored all data structure implementations, including their methods and accompanying
