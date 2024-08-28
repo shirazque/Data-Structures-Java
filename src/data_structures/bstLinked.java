@@ -69,8 +69,8 @@ class treeNode {
 
 class BST {
 		
-	treeNode root;
-	int count;
+	private treeNode root;
+	private int count;
 
     BST() {
     	// Constructor of the BST
