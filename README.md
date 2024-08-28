@@ -19,6 +19,8 @@ documentation.
 This project folder includes the Stack, Queue, Priority Queue, Doubly Linked List, and Binary Search Tree 
 (BST) ADTs.
 
+To view the main project files, navigate to `src` -> `data_structures`. The `data_structures` folder contains the data structure implementations and their corresponding test files (authored by me), along with txt files that display the output of those tests.
+
 I have made the Stack, Queue, and Priority Queue ADTs rudimentary, as their primary functions are to insert
 and remove data in a systematic order. In contrast, Lists and Binary Search Trees (BSTs) are more flexible
 and are explicitly designed to support more complex operations, such as searching, sorting, and reversing.
