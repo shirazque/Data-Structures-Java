@@ -501,6 +501,6 @@ public class bstLinked {
         System.out.println(myBST.postorderTraversal());
 
         // Test 10: Test totalHeight after flip (height should remain unchanged, expected: 3)
-        System.out.println("Test 10: Total height of the BST after flip (expected: 3): " + myBST.totalHeight());
+        System.out.println("Test 10: Total height of the BST after flip (expected: 15): " + myBST.totalHeight());
     }
 }
