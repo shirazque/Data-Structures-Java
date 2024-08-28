@@ -49,6 +49,6 @@ Test 8: Total height of the BST (expected: 3): 11
 Test 9: Inorder Traversal after flip (expected: [25, 20, 17, 15, 12, 10, 8]): [25, 20, 17, 15, 12, 10, 8]
 Test 9: Preorder Traversal after flip (expected: [15, 20, 25, 17, 10, 12, 8]): [15, 20, 25, 17, 10, 12, 8]
 Test 9: Postorder Traversal after flip (expected: [25, 17, 20, 12, 8, 10, 15]): [25, 17, 20, 12, 8, 10, 15]
-Test 10: Total height of the BST after flip (expected: 3): 11
+Test 10: Total height of the BST after flip (expected: 11): 11
 
 --------------------------------------------------------------------------------------------------------------------------------
