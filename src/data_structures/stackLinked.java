@@ -34,8 +34,8 @@ class stackNode {
 }
 
 class stack {
-	stackNode top;
-	int count;
+	private stackNode top;
+	private int count;
     
 	stack() {
     	// Constructor of the BST
