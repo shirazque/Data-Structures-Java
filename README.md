@@ -23,8 +23,8 @@ To view the main project files, navigate to `src` -> `data_structures`. The `dat
 the data structure implementations and their corresponding test files (authored by me), along with txt files
 that display the output of those tests.
 
-If you intend to use methods from my Data Structures files, please ensure that your variable declarations
-align with the method signatures provided to avoid any syntax errors.
+If you intend to use my Data Structures and call their methods, please ensure that your variable declarations
+align with the provided method signatures to avoid any syntax errors.
 
 I have made the Stack, Queue, and Priority Queue ADTs rudimentary, as their primary functions are to insert
 and remove data in a systematic order. In contrast, Lists and Binary Search Trees (BSTs) are more flexible
