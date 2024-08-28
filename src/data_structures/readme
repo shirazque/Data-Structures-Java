@@ -11,8 +11,8 @@
  */
  
 As someone with a strong Python background attempting to learn Java, this project aims to explore Java's functionality by implementing various
-data structures through Object-Oriented Programming principles. I will be updating these files as I gain more experience in Java programming over
-time. I have personally authored all data structure implementations, including their methods and accompanying documentation.
+data structures (linked) through Object-Oriented Programming principles. I will be updating these files as I gain more experience in Java programming
+over time. I have personally authored all data structure implementations, including their methods and accompanying documentation.
 
 This project folder includes the following data structure ADTs:
 	1. Stack
@@ -21,6 +21,6 @@ This project folder includes the following data structure ADTs:
 	4. Doubly Linked List
 	5. Binary Search Tree (BST)
 		
-I have made the Stack, Queue, and Priority Queue ADTs rudimentary, as their primary functions are to insert and remove data in a systematic order.
-In contrast, Lists and Binary Search Trees (BSTs) are more flexible and are explicitly designed to support more complex operations, such as searching,
+I have made the Stack, Queue, and Priority Queue ADTs rudimentary, as their primary functions are to insert and remove data in a systematic order. In
+contrast, Lists and Binary Search Trees (BSTs) are more flexible and are explicitly designed to support more complex operations, such as searching,
 sorting, and reversing.

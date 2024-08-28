@@ -1,3 +1,14 @@
+/*
+ * -------------------------------------------------------
+ * Testing the Queue ADT
+ * -------------------------------------------------------
+ * Author: Shiraz Qasmi
+ * ID: 169036233
+ * Email: qasm6233@mylaurier.ca
+ * __updated__ = "2024-08-27"
+ * -------------------------------------------------------
+ */
+
 package data_structures;
 
 public class queueTest {

@@ -5,7 +5,7 @@
  * Author: Shiraz Qasmi
  * ID: 169036233
  * Email: qasm6233@mylaurier.ca
- * __updated__ = "2024-08-19"
+ * __updated__ = "2024-08-27"
  * -------------------------------------------------------
  */
 
@@ -86,8 +86,7 @@ class doubleList {
 		 * ----------------------------------------------------------
 		 * Gets the item at index i
 		 * ----------------------------------------------------------
-		 * O(1) Time Complexity
-		 * Worst case scenario: O(n) Time Complexity
+		 * O(n) Time Complexity
 		 * ----------------------------------------------------------
 		 * Returns:
 		 *        value - The value at index i, null otherwise.
@@ -121,8 +120,7 @@ class doubleList {
 		 * ----------------------------------------------------------
 		 * Sets the item at index i to value
 		 * ----------------------------------------------------------
-		 * O(1) Time Complexity
-		 * Worst Case: O(n) Time Complexity
+		 * O(n) Time Complexity
 		 * ----------------------------------------------------------
 		 * Returns:
 		 *        value - The value at index i, null otherwise.
@@ -180,7 +178,7 @@ class doubleList {
 		
 	}
 
-	public void append(int value) {
+	public void append(int value) { // I have allowed this to be called internally, even though it is a public method
 		/*
 		 * ----------------------------------------------------------
 		 * Appends value into the List
@@ -216,8 +214,7 @@ class doubleList {
 		 * ----------------------------------------------------------
 		 * Inserts value into the List
 		 * ----------------------------------------------------------
-		 * O(1) Time Complexity
-		 * Worst Case: O(n) Time Complexity
+		 * O(n) Time Complexity with O(1) Special Cases
 		 * ----------------------------------------------------------
 		 * Returns:
 		 *        null
@@ -226,20 +223,25 @@ class doubleList {
 		
 		dllNode node = new dllNode(value, null, null);
 		
+		// If i is negative, convert it to its positive counterpart
+	    if (i < 0) {
+	        i = this.count + i;
+	    }
+		
 		// Special Case: List is empty
 		if (this.front == null) {
 			this.front = this.rear = node;
 		}
 		
 		// Special Case: Value goes at the front of the List
-		else if (i == 0 || i < -(this.count)) {
+		else if (i <= 0) {
 			node.next = this.front;
 			this.front.previous = node;
 			this.front = node;
 		}
 		
 		// Special Case: Value goes at the rear of the List
-		else if (i > (this.count - 1)) {
+		else if (i >= this.count) {
 			this.rear.next = node;
 			node.previous = this.rear;
 			this.rear = node;
@@ -247,19 +249,13 @@ class doubleList {
 		}
 		
 		// The General Case: Value goes elsewhere in the List
-		else {
-			
-			// If the index is negative, we will convert it to its "positive counterpart" to find its proper position
-			if (i < 0) {
-				i = this.count + i;
-			}
-			
+		else {			
 			// Initializing a counter, prev node and curr node to locate the proper position of the new node
 			int counter = 0;
 			dllNode prev = null;
 			dllNode curr = this.front;
 			
-			while (curr != null && counter < i) {
+			while (counter < i) {
 				prev = curr;
 				curr = curr.next;
 				counter = counter + 1;	
@@ -285,7 +281,6 @@ class doubleList {
 		 * Removes explicitly from the front of the List
 		 * ----------------------------------------------------------
 		 * O(1) Time Complexity
-		 * Worst Case: O(n) Time Complexity
 		 * ----------------------------------------------------------
 		 * Returns:
 		 *        Value at the front of the List, otherwise null.
@@ -325,8 +320,7 @@ class doubleList {
 		 * Removes node containing key from the List (if key is repeated, first
 		 * occurrence is removed)
 		 * ----------------------------------------------------------
-		 * O(1) Time Complexity
-		 * 
+		 * O(n) Time Complexity with O(1) Special Cases
 		 * ----------------------------------------------------------
 		 * Returns:
 		 *        Value at index i of the List, otherwise null.
@@ -378,27 +372,6 @@ class doubleList {
 		
 		return value;
 	
-	}
-
-	/* Work in Progress (WIP) */
-	public Integer pop (Integer i) {
-		/*
-		 * ----------------------------------------------------------
-		 * Removes node containing key from the List (if key is repeated, first
-		 * occurrence is removed)
-		 * ----------------------------------------------------------
-		 * O(1) Time Complexity
-		 * Worst case scenario: O(n) Time Complexity
-		 * ----------------------------------------------------------
-		 * Returns:
-		 *        Value at index i of the List, value at the end of the
-		 *        List if i is null, otherwise null.
-		 * ----------------------------------------------------------
-		 */
-		
-		Integer value = null;
-		return value;
-		
 	}
 
 	public Integer removeRear () {
@@ -488,7 +461,7 @@ class doubleList {
 		 * ----------------------------------------------------------
 		 * Finds the maximum value in the List
 		 * ----------------------------------------------------------
-		 * O(1) Time Complexity
+		 * O(n) Time Complexity
 		 * ----------------------------------------------------------
 		 * Returns:
 		 *        Maximum value in the List, otherwise null.
@@ -519,7 +492,7 @@ class doubleList {
 		 * ----------------------------------------------------------
 		 * Finds the minimum value in the List
 		 * ----------------------------------------------------------
-		 * O(1) Time Complexity
+		 * O(n) Time Complexity
 		 * ----------------------------------------------------------
 		 * Returns:
 		 *        Minimum value in the List, otherwise null.
@@ -651,19 +624,19 @@ class doubleList {
 
 		// Ensures that method is eligible to even swap nodes
 		if (this.front != null && l != r && l != null && r != null) {
-			dllNode l_prev = l.previous;
-			dllNode l_next = l.next;
-			dllNode r_prev = r.previous;
-			dllNode r_next = r.next;
+			dllNode lPrev = l.previous;
+			dllNode lNext = l.next;
+			dllNode rPrev = r.previous;
+			dllNode rNext = r.next;
 			
 			// Special Case: If l is front and r is rear
 			if (l == this.front && r == this.rear) {
 				// Disconnecting l and r from the main list
-				this.front = l_next;
-				l_next.previous = null;
+				this.front = lNext;
+				lNext.previous = null;
 				
-				this.rear = r_prev;
-				r_prev.next = null;
+				this.rear = rPrev;
+				rPrev.next = null;
 				
 				// Reattaching left on the rear
 				this.rear.next = l;
@@ -681,11 +654,11 @@ class doubleList {
 			// Special Case: If r is front and l is rear
 			else if (r == this.front && l == this.rear) {
 				// Disconnecting l and r from the main list
-				this.front = r_next;
-				r_next.previous = null;
+				this.front = rNext;
+				rNext.previous = null;
 				
-				this.rear = l_prev;
-				l_prev.next = null;
+				this.rear = lPrev;
+				lPrev.next = null;
 				
 				// Reattaching right on the rear
 				this.rear.next = r;
@@ -704,18 +677,18 @@ class doubleList {
 			// Special Case: If l is front and r is not rear
 			else if (l == this.front && r != this.rear) {
 				// Disconnecting l and r from the main list
-				this.front = l_next;
-				l_next.previous = null;
+				this.front = lNext;
+				lNext.previous = null;
 				
-				r_prev.next = r.next;
-				r_next.previous = r_prev;
+				rPrev.next = r.next;
+				rNext.previous = rPrev;
 				
 				// Reattaching left on where r was
-				l.previous = r_prev;
-				l.next = r_next;
+				l.previous = rPrev;
+				l.next = rNext;
 				
-				r_prev.next = l;
-				r_next.previous = l;
+				rPrev.next = l;
+				rNext.previous = l;
 				
 				// Reattaching r on the front
 				r.next = this.front;
@@ -727,18 +700,18 @@ class doubleList {
 			// Special Case: If r is front and l is not rear
 			else if (r == this.front && l != this.rear) {
 				// Disconnecting l and r from the main list
-				this.front = r_next;
-				r_next.previous = null;
+				this.front = rNext;
+				rNext.previous = null;
 				
-				l_prev.next = l.next;
-				l_next.previous = l_prev;
+				lPrev.next = l.next;
+				lNext.previous = lPrev;
 				
 				// Reattaching right on where l was
-				r.previous = l_prev;
-				r.next = l_next;
+				r.previous = lPrev;
+				r.next = lNext;
 				
-				l_prev.next = r;
-				l_next.previous = r;
+				lPrev.next = r;
+				lNext.previous = r;
 				
 				// Reattaching l on the front
 				l.next = this.front;
@@ -751,56 +724,56 @@ class doubleList {
 			// Special Case: If next node to l is r
 			else if (l.next == r) {
 				// Disconnecting l and r from the main list
-				l_prev.next = r_next;
-				r_next.previous = l_prev;
+				lPrev.next = rNext;
+				rNext.previous = lPrev;
 				
 				// Reattaching the nodes
-				r.previous = l_prev;
+				r.previous = lPrev;
 				r.next = l;
 				l.previous = r;
-				l.next = r_next;
-				l_prev.next = r;
-				r_next.previous = l;
+				l.next = rNext;
+				lPrev.next = r;
+				rNext.previous = l;
 					
 			}
 			
 			// Special Case: If next node to r is l
 			else if (r.next == l) {
 				// Disconnecting r and l from the main list
-				r_prev.next = l_next;
-				l_next.previous = r_prev;
+				rPrev.next = lNext;
+				lNext.previous = rPrev;
 				
 				// Reattaching the nodes
-				l.previous = r_prev;
+				l.previous = rPrev;
 				l.next = r;
 				r.previous = l;
-				r.next = l_next;
-				r_prev.next = l;
-				l_next.previous = r;
+				r.next = lNext;
+				rPrev.next = l;
+				lNext.previous = r;
 				
 			}
 			
 			// The General Case: Excludes all cases from above
 			else {
 				// Disconnecting l and r from the main list
-				l_prev.next = l_next;
-				l_next.previous = l_prev;
+				lPrev.next = lNext;
+				lNext.previous = lPrev;
 				
-				r_prev.next = r_next;
-				r_next.previous = l_prev;
+				rPrev.next = rNext;
+				rNext.previous = lPrev;
 				
 				// Reattaching the nodes
-				r.previous = l_prev;
-				r.next = l_next;
+				r.previous = lPrev;
+				r.next = lNext;
 				
-				l_prev.next = r;
-				l_next.previous = r;
+				lPrev.next = r;
+				lNext.previous = r;
 				
-				l.previous = r_prev;
-				l.next = r_next;
+				l.previous = rPrev;
+				l.next = rNext;
 				
-				r_prev.next = l;
-				r_next.previous = l;
+				rPrev.next = l;
+				rNext.previous = l;
 				
 			}
 		}
@@ -846,21 +819,6 @@ class doubleList {
 		}
 	}
 	
-	/* Work in Progress (WIP) */
-	public void sort() {
-	    /*
-	     * ----------------------------------------------------------
-	     * Sorts the contents of the List (Merge Sort).
-	     * ----------------------------------------------------------
-	     * O(n^2) Time Complexity
-	     * ----------------------------------------------------------
-	     * Returns:
-	     *        null
-	     * ----------------------------------------------------------
-	     */
-		
-	}
-	
 	public ArrayList splitAlt() {
 	    /*
 	     * ----------------------------------------------------------
@@ -868,7 +826,7 @@ class doubleList {
 	     * alternating into the targets. 
 	     * The Target lists will be appended an returned within an ArrayList.
 	     * ----------------------------------------------------------
-	     * O(n^2) Time Complexity
+	     * O(n) Time Complexity
 	     * ----------------------------------------------------------
 	     * Returns:
 	     *        targetLists, which contains target1 and target2 (ArrayList)
@@ -880,17 +838,22 @@ class doubleList {
 		ArrayList targetLists = new ArrayList(); // Declares an ArrayList (much easier to work with as a standard Array in Java is of fixed size)	
 		int counter = 0;
 		
-		while (this.front != null) {
-			if (counter % 2 == 0) {
-				target1.moveFrontToRear(this);
+		if (this.count > 0) {
+			while (this.count > 0) {
+				if (counter % 2 == 0) {
+					target1.moveFrontToRear(this);
+				}
+				
+				else {
+					target2.moveFrontToRear(this);
+				}
+		
+				counter = counter + 1;	
 			}
-			
-			else {
-				target2.moveFrontToRear(this);
-			}
-	
-			counter = counter + 1;	
 		}
+			
+		targetLists.add(target1);
+		targetLists.add(target2);
 		
 		return targetLists;
 	}
@@ -914,7 +877,10 @@ class doubleList {
 			
 			if (target.count > 1) {				
 				target.front = target.front.next;
-				target.front.previous = null;
+			
+				if (target.front != null) {
+					target.front.previous = null;
+				}
 			}
 			
 			else {
@@ -922,6 +888,7 @@ class doubleList {
 				target.rear = null;
 			}
 			
+			target.count = target.count - 1;
 			nodeTarget.next = null;
 			
 			// Appending target node to the end of the source List
@@ -935,6 +902,8 @@ class doubleList {
 				this.front = nodeTarget;
 				this.rear = nodeTarget;
 			}
+			
+			this.count = this.count + 1;
 			
 		}
 		

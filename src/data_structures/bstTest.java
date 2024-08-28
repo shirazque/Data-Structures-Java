@@ -1,3 +1,14 @@
+/*
+ * -------------------------------------------------------
+ * Testing the Binary Search Tree ADT
+ * -------------------------------------------------------
+ * Author: Shiraz Qasmi
+ * ID: 169036233
+ * Email: qasm6233@mylaurier.ca
+ * __updated__ = "2024-08-27"
+ * -------------------------------------------------------
+ */
+
 package data_structures;
 
 import java.util.ArrayList;
@@ -21,8 +32,6 @@ public class bstTest {
     	test_bst.insert(8);
 
     	System.out.println();
-    	System.out.println("-------------------------------------------------------");
-    	System.out.println();
 
     	// Testing out different traversal methods that utilize Recursion
     	System.out.println("Preorder Traversal:");
@@ -39,7 +48,7 @@ public class bstTest {
     	ArrayList postorder = test_bst.postorderTraversal();
     	System.out.println(postorder);
     	System.out.println();
-    	System.out.println("-------------------------------------------------------");
+    	System.out.println("");
 
     }
 }

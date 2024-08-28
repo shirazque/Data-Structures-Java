@@ -1,3 +1,14 @@
+/*
+ * -------------------------------------------------------
+ * Testing the Stack ADT
+ * -------------------------------------------------------
+ * Author: Shiraz Qasmi
+ * ID: 169036233
+ * Email: qasm6233@mylaurier.ca
+ * __updated__ = "2024-08-27"
+ * -------------------------------------------------------
+ */
+
 package data_structures;
 
 public class stackTest {
@@ -13,9 +24,9 @@ public class stackTest {
 
         // Printing out the contents of the Stack
         System.out.println("Printing out the contents of the Stack:");
-        System.out.println("-------------------------------------------------------");
+        System.out.println("");
         testStack.iter();
-        System.out.println("-------------------------------------------------------");
+        System.out.println("");
 
         // Popping from the Stack
         int val = testStack.pop();
@@ -29,8 +40,8 @@ public class stackTest {
         // Printing out the contents of the Stack
         System.out.println();
         System.out.println("Printing out the contents of the Stack:");
-        System.out.println("-------------------------------------------------------");
+        System.out.println("");
         testStack.iter();
-        System.out.println("-------------------------------------------------------");
+        System.out.println("");
     }
 }

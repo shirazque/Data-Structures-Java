@@ -5,7 +5,7 @@
  * Author: Shiraz Qasmi
  * ID: 169036233
  * Email: qasm6233@mylaurier.ca
- * __updated__ = "2024-08-19"
+ * __updated__ = "2024-08-27"
  * -------------------------------------------------------
  */
 
@@ -81,8 +81,7 @@ class priorityQueue {
 		 * ----------------------------------------------------------
 		 * Inserts data into the Priority Queue
 		 * ----------------------------------------------------------
-		 * O(1) Time Complexity
-		 * Worst Case: O(n) Time Complexity
+		 * O(n) Time Complexity with O(1) Special Cases
 		 * ----------------------------------------------------------
 		 * Returns:
 		 *        null

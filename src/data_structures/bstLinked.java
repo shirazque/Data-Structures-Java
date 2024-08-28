@@ -5,7 +5,7 @@
  * Author: Shiraz Qasmi
  * ID: 169036233
  * Email: qasm6233@mylaurier.ca
- * __updated__ = "2024-08-19"
+ * __updated__ = "2024-08-27"
  * -------------------------------------------------------
  */
 
@@ -115,9 +115,9 @@ class BST {
 		 * ----------------------------------------------------------
 		 * Inserts data into the BST
 		 * ----------------------------------------------------------
-		 * O(log(n)) Time Complexity, i.e., logarithmic time complexity
-		 * Worst Case: O(n) Time Complexity, i.e., linear time complexity
-		 *  (Recursive Algorthm)
+		 * O(log(n)) Time Complexity, i.e., logarithmic time complexity 
+		 * with O(n) Time Complexity, i.e., linear time complexity if BST
+		 * resembles Linked List (Recursive Algorithm)
 		 * ----------------------------------------------------------
 		 * Returns:
 		 *        null
@@ -133,8 +133,9 @@ class BST {
 		 * ----------------------------------------------------------
 		 * Auxiliary function that inserts a value into a BST.
 		 * ----------------------------------------------------------
-		 * O(log(n)) Time Complexity, i.e., logarithmic time complexity
-		 * Worst Case: O(n) Time Complexity, i.e., linear time complexity
+		 * O(log(n)) Time Complexity, i.e., logarithmic time complexity 
+		 * with O(n) Time Complexity, i.e., linear time complexity if BST
+		 * resembles Linked List
 		 * ----------------------------------------------------------
 		 * Returns:
 		 *        null
