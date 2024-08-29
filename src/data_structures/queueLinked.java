@@ -5,7 +5,7 @@
  * Author: Shiraz Qasmi
  * ID: 169036233
  * Email: qasm6233@mylaurier.ca
- * __updated__ = "2024-08-28"
+ * __updated__ = "2024-08-29"
  * -------------------------------------------------------
  */
 
@@ -104,7 +104,7 @@ class queue {
 		return;
 	}
 
-	public int remove() {
+	public Integer remove() {
 		/*
 		 * ----------------------------------------------------------
 		 * Pops from the Queue
@@ -135,7 +135,7 @@ class queue {
 		return value;
 	}
 
-	public int peek() {
+	public Integer peek() {
 		/*
 		 * ----------------------------------------------------------
 		 * Peeks from the Queue; null return indicates Queue is empty, otherwise Integer
