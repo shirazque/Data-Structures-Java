@@ -5,7 +5,7 @@
  * Author: Shiraz Qasmi
  * ID: 169036233
  * Email: qasm6233@mylaurier.ca
- * __updated__ = "2024-08-28"
+ * __updated__ = "2024-08-29"
  * -------------------------------------------------------
  */
 
@@ -38,7 +38,7 @@ public class priorityQueueTest {
     	System.out.println("The queue is empty: " + empty_after);
     	
     	// Removing from queue
-    	int value = test_queue.remove();
+    	Integer value = test_queue.remove();
     	System.out.println();
     	System.out.println("Removed value: " + value);
     	System.out.println();
@@ -48,7 +48,7 @@ public class priorityQueueTest {
     	System.out.println();
     	
     	// Peeking from the Queue:
-    	int value_peek = test_queue.peek();
+    	Integer value_peek = test_queue.peek();
     	System.out.println("Peeked value: " + value_peek);
     	
     }
