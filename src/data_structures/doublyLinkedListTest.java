@@ -5,7 +5,7 @@
  * Author: Shiraz Qasmi
  * ID: 169036233
  * Email: qasm6233@mylaurier.ca
- * __updated__ = "2024-08-28"
+ * __updated__ = "2024-08-29"
  * -------------------------------------------------------
  */
 
@@ -34,9 +34,9 @@ public class doublyLinkedListTest {
     	System.out.println("");
     	
     	// Removing values from the List
-    	int valueFront = testDoublyList.removeFront();
-    	int valueRear = testDoublyList.removeRear();
-    	int valueMiddle = testDoublyList.remove(5);
+    	Integer valueFront = testDoublyList.removeFront();
+    	Integer valueRear = testDoublyList.removeRear();
+    	Integer valueMiddle = testDoublyList.remove(5);
     	System.out.println("Removed front: " + valueFront);
     	System.out.println("Removed rear: " + valueRear);
     	System.out.println("Removed: " + valueMiddle);
