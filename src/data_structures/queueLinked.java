@@ -112,7 +112,7 @@ class queue {
 		 * O(1) Time Complexity
 		 * ----------------------------------------------------------
 		 * Returns:
-		 *        Value - The value from the front of the Queue (int)
+		 *        Value - The value from the front of the Queue (Integer)
 		 * ----------------------------------------------------------
 		 */
 
@@ -138,12 +138,12 @@ class queue {
 	public int peek() {
 		/*
 		 * ----------------------------------------------------------
-		 * Peeks from the Queue; null return indicates Queue is empty, otherwise int
+		 * Peeks from the Queue; null return indicates Queue is empty, otherwise Integer
 		 * ----------------------------------------------------------
 		 * O(1) Time Complexity
 		 * ----------------------------------------------------------
 		 * Returns:
-		 *        Value - the value from the front of the Queue (int)
+		 *        Value - the value from the front of the Queue (Integer)
 		 * ----------------------------------------------------------
 		 */
 		
