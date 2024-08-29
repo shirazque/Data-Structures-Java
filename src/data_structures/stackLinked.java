@@ -93,7 +93,7 @@ class stack {
 		return;
 	}
 
-	public int pop() {
+	public Integer pop() {
 		/*
 		 * ----------------------------------------------------------
 		 * Pops from the Stack
@@ -101,7 +101,7 @@ class stack {
 		 * O(1) Time Complexity
 		 * ----------------------------------------------------------
 		 * Returns:
-		 *        Value - The value from the top of the Stack (int)
+		 *        Value - The value from the top of the Stack (Integer)
 		 * ----------------------------------------------------------
 		 */
 
@@ -117,15 +117,15 @@ class stack {
 		return value;
 	}
 
-	public int peek() {
+	public Integer peek() {
 		/*
 		 * ----------------------------------------------------------
-		 * Peeks from the Stack; null return indicates Stack is empty, otherwise int
+		 * Peeks from the Stack; null return indicates Stack is empty, otherwise Integer
 		 * ----------------------------------------------------------
 		 * O(1) Time Complexity
 		 * ----------------------------------------------------------
 		 * Returns:
-		 *        Value - the value from the top of the Stack (int)
+		 *        Value - the value from the top of the Stack (Integer)
 		 * ----------------------------------------------------------
 		 */
 		
