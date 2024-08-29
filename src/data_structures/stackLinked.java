@@ -5,7 +5,7 @@
  * Author: Shiraz Qasmi
  * ID: 169036233
  * Email: qasm6233@mylaurier.ca
- * __updated__ = "2024-08-28"
+ * __updated__ = "2024-08-29"
  * -------------------------------------------------------
  */
 
@@ -38,7 +38,7 @@ class stack {
 	private int count;
     
 	stack() {
-    	// Constructor of the BST
+    	// Constructor of the Stack
         this.top = null;
         this.count = 0;
     }
