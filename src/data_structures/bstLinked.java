@@ -500,7 +500,7 @@ public class bstLinked {
         System.out.print("Test 9: Postorder Traversal after flip (expected: [25, 17, 20, 12, 8, 10, 15]): ");
         System.out.println(myBST.postorderTraversal());
 
-        // Test 10: Test totalHeight after flip (height should remain unchanged, expected: 3)
+        // Test 10: Test totalHeight after flip (height should remain unchanged, expected: 15)
         System.out.println("Test 10: Total height of the BST after flip (expected: 15): " + myBST.totalHeight());
     }
 }
