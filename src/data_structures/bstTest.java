@@ -5,7 +5,7 @@
  * Author: Shiraz Qasmi
  * ID: 169036233
  * Email: qasm6233@mylaurier.ca
- * __updated__ = "2024-08-28"
+ * __updated__ = "2024-08-29"
  * -------------------------------------------------------
  */
 
@@ -57,7 +57,7 @@ public class bstTest {
     	
     	// Getting the total heights of the BST
     	System.out.println("Sum of the total heights of the BST: ");
-    	int heights = test_bst.totalHeight();
+    	Integer heights = test_bst.totalHeight();
     	System.out.println(heights);
 
     }
