@@ -126,7 +126,7 @@ class priorityQueue {
 		return;
 	}
 
-	public int remove() {
+	public Integer remove() {
 		/*
 		 * ----------------------------------------------------------
 		 * Pops from the Priority Queue
@@ -134,7 +134,7 @@ class priorityQueue {
 		 * O(1) Time Complexity
 		 * ----------------------------------------------------------
 		 * Returns:
-		 *        Value - The value from the front of the Priority Queue (int)
+		 *        Value - The value from the front of the Priority Queue (Integer)
 		 * ----------------------------------------------------------
 		 */
 
@@ -157,15 +157,15 @@ class priorityQueue {
 		return value;
 	}
 
-	public int peek() {
+	public Integer peek() {
 		/*
 		 * ----------------------------------------------------------
-		 * Peeks from the Priority Queue; null return indicates Priority Queue is empty, otherwise int
+		 * Peeks from the Priority Queue; null return indicates Priority Queue is empty, otherwise Integer
 		 * ----------------------------------------------------------
 		 * O(1) Time Complexity
 		 * ----------------------------------------------------------
 		 * Returns:
-		 *        Value - the value from the front of the Priority Queue (int)
+		 *        Value - the value from the front of the Priority Queue (Integer)
 		 * ----------------------------------------------------------
 		 */
 		
