@@ -5,7 +5,7 @@
  * Author: Shiraz Qasmi
  * ID: 169036233
  * Email: qasm6233@mylaurier.ca
- * __updated__ = "2024-08-28"
+ * __updated__ = "2024-08-29"
  * -------------------------------------------------------
  */
 
@@ -427,7 +427,7 @@ class BST {
 			node.left = node.right;
 			node.right = flip;
 			
-			// Recursively traverse to the left and right subtree
+		// Recursively traverse to the left and right subtree
 	        this.flip(node.left);
 	        this.flip(node.right);
 			
